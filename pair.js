@@ -58,7 +58,7 @@ router.get('/', async (req, res) => {
                     quoted: xeonses
                 });
 				await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `
-    *╭❍* *SUCCESSFULLY CONNECTED* *❍*
+*╭❍* *SUCCESSFULLY CONNECTED* *❍*
 *┊* Please support our channels
 *┊*❶  || *ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ* =
 https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g
