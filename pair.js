@@ -57,7 +57,19 @@ router.get('/', async (req, res) => {
                 }, {
                     quoted: xeonses
                 });
-				await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `📛Do not share code with anyone\n\n© Subscribe @elite-pro-empire on Youtube` }, {quoted: xeonses});
+				await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `
+    *╭❍* *SUCCESSFULLY CONNECTED* *❍*
+*┊* Please support our channels
+*┊*❶  || *ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ* =
+https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g
+*┊*❷ || *ᴛᴇʟᴇɢʀᴀᴍ* =
+https://t.me/elitepro_md
+*┊*➌ || *ʏᴏᴜᴛᴜʙᴇ* =
+https://youtube.com/@elite-pro-empire
+*┊* 📛Don't share code with anyone.
+*┊* *ᴠɪꜱɪᴛ ᴏᴜʀ ᴡᴇʙꜱɪᴛᴇ ғᴏʀ ᴍᴏʀᴇ*
+https://elite-production.vercel.app
+*╰═❍* *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴇʟɪᴛᴇ-ᴘʀᴏ*` }, {quoted: xeonses});
         await delay(100);
         return await removeFile('./session');
         process.exit(0)
