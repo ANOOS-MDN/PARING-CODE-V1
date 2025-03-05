@@ -57,18 +57,18 @@ router.get('/', async (req, res) => {
                 }, {
                     quoted: xeonses
                 });
-				await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `
-*╭❍* *SUCCESSFULLY CONNECTED* *❍*
+await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `*╭❍* *SUCCESSFULLY CONNECTED* *❍*
 *┊* Please support our channels
 *┊*❶  || *ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ* =
 https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g
 *┊*❷ || *ᴛᴇʟᴇɢʀᴀᴍ* =
 https://t.me/elitepro_md
 *┊*➌ || *ʏᴏᴜᴛᴜʙᴇ* =
-https://youtube.com/@elite-pro-empire
+https://youtube.com/@elitepro-empire
 *┊* 📛Don't share code with anyone.
 *┊* *ᴠɪꜱɪᴛ ᴏᴜʀ ᴡᴇʙꜱɪᴛᴇ ғᴏʀ ᴍᴏʀᴇ*
 https://elite-production.vercel.app
+*┊* Upload the file on session folder.
 *╰═❍* *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴇʟɪᴛᴇ-ᴘʀᴏ*` }, {quoted: xeonses});
         await delay(100);
         return await removeFile('./session');
