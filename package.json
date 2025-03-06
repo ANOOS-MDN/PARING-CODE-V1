@@ -14,7 +14,7 @@
     "awesome-phonenumber": "^3.0.0",
     "pino": "^8.15.0",
     "phone": "^3.1.32",
-    "body-parser": "^1.21.0",
+    "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "path": "^0.12.8"
   }
