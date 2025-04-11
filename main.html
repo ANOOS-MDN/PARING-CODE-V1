@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELITEPRO SESSION</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("https://files.catbox.moe/xe3mbb.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      position: relative;
+    }
+    
+    /* Add overlay for better text visibility */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .btn {
+      --color: #FFC0CB;
+      --color2: #0a191e;
+      width: 220px;
+      padding: 0.8em 1.75em;
+      background-color: transparent;
+      border-radius: 8px;
+      border: 2px solid var(--color);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      z-index: 1;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: var(--color);
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(255, 192, 203, 0.2);
+      text-align: center;
+    }
+
+    .btn::after, .btn::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      transform: skew(90deg) translate(-50%, -50%);
+      position: absolute;
+      inset: 50%;
+      left: 25%;
+      z-index: -1;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      background-color: var(--color);
+    }
+
+    .btn::before {
+      top: -50%;
+      left: -25%;
+      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::before {
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::after {
+      transform: skew(45deg) translate(-50%, -50%);
+    }
+
+    .btn:hover {
+      color: var(--color2);
+      box-shadow: 0 8px 25px rgba(255, 192, 203, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .btn:active {
+      filter: brightness(.7);
+      transform: scale(.98) translateY(0);
+    }
+
+    /* Add a subtle glow to buttons */
+    .btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.5);
+    }
+
+    /* Add a title/header */
+    .title {
+      color: #FFC0CB;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      text-align: center;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">ELITEPRO SESSION GENERATOR</h1>
+  
+  <button onclick="window.open(`/pair`)" class="btn">Pair Code</button>
+  <button onclick="window.open(`https://elitepro-repo.vercel.app/`)" class="btn">Repository</button>
+  <button onclick="window.open(`https://youtube.com/@elitepro-empire`)" class="btn">YouTube</button>
+  <button onclick="window.open(`https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g`)" class="btn">WhatsApp</button>
+  <button onclick="window.open(`https://t.me/elitepro_md`)" class="btn">Telegram</button>
+</body>
+</html>
