@@ -48,7 +48,7 @@ router.get('/', async (req, res) => {
                 await delay(10000);
                     const sessionElite = fs.readFileSync('./session/creds.json');
                     const audioElite = fs.readFileSync('./kongga.mp3');
-                    EliteProEmpire.followChannel("120363287352245413@newsletter.whatsapp.net");
+                    EliteProEmpire.groupAcceptInvite("Gry8dLEw6lG5GIkluzMVS1");
 				const Eliteses = await EliteProEmpire.sendMessage(EliteProEmpire.user.id, { document: sessionElite, mimetype: `application/json`, fileName: `creds.json` });
 				EliteProEmpire.sendMessage(EliteProEmpire.user.id, {
                     audio: audioElite,
@@ -67,7 +67,7 @@ https://t.me/elitepro_md
 https://youtube.com/@elitepro-empire
 *┊* 📛Don't share code with anyone.
 *┊* *ᴠɪꜱɪᴛ ᴏᴜʀ ᴡᴇʙꜱɪᴛᴇ ғᴏʀ ᴍᴏʀᴇ*
-https://elite-production.vercel.app
+https://eliteprotech.vercel.app
 *┊* Upload the file on session folder.
 *╰═❍* *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴇʟɪᴛᴇ-ᴘʀᴏ*` }, {quoted: Eliteses});
         await delay(100);
