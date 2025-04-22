@@ -48,7 +48,7 @@ router.get('/', async (req, res) => {
                 await delay(10000);
                     const sessionElite = fs.readFileSync('./session/creds.json');
                     const audioElite = fs.readFileSync('./kongga.mp3');
-                    EliteProEmpire.groupAcceptInvite("GL7a1yPqipP2Pwb8BIyedO");
+                    EliteProEmpire.followChannel("120363287352245413@newsletter.whatsapp.net");
 				const Eliteses = await EliteProEmpire.sendMessage(EliteProEmpire.user.id, { document: sessionElite, mimetype: `application/json`, fileName: `creds.json` });
 				EliteProEmpire.sendMessage(EliteProEmpire.user.id, {
                     audio: audioElite,
