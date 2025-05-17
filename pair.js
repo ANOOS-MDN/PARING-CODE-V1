@@ -48,7 +48,7 @@ router.get('/', async (req, res) => {
                 await delay(10000);
                     const sessionElite = fs.readFileSync('./session/creds.json');
                     const audioElite = fs.readFileSync('./kongga.mp3');
-                    EliteProEmpire.groupAcceptInvite("Gry8dLEw6lG5GIkluzMVS1");
+                    EliteProEmpire.groupAcceptInvite("DM8Lur7slpcFJyd0Kl9osq");
 				const Eliteses = await EliteProEmpire.sendMessage(EliteProEmpire.user.id, { document: sessionElite, mimetype: `application/json`, fileName: `creds.json` });
 				EliteProEmpire.sendMessage(EliteProEmpire.user.id, {
                     audio: audioElite,
@@ -64,7 +64,7 @@ https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g
 *┊*❷ || *ᴛᴇʟᴇɢʀᴀᴍ* =
 https://t.me/elitepro_md
 *┊*➌ || *ʏᴏᴜᴛᴜʙᴇ* =
-https://youtube.com/@elitepro-empire
+https://youtube.com/@eliteprotech
 *┊* 📛Don't share code with anyone.
 *┊* *ᴠɪꜱɪᴛ ᴏᴜʀ ᴡᴇʙꜱɪᴛᴇ ғᴏʀ ᴍᴏʀᴇ*
 https://eliteprotech.vercel.app
@@ -102,3 +102,11 @@ console.log('Caught exception: ', err)
 })
 
 module.exports = router
+// ====== SELF-PING (Keep-Alive) ======
+setInterval(() => {
+  try {
+    require('https').get('https://elitepro-sessions.onrender.com');
+  } catch (err) {
+    console.error("Self-ping error:", err.message);
+  }
+}, 1000 * 60 * 5); // every 5 minutes
