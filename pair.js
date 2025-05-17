@@ -102,11 +102,3 @@ console.log('Caught exception: ', err)
 })
 
 module.exports = router
-// ====== SELF-PING (Keep-Alive) ======
-setInterval(() => {
-  try {
-    require('https').get('https://elitepro-sessions.onrender.com');
-  } catch (err) {
-    console.error("Self-ping error:", err.message);
-  }
-}, 1000 * 60 * 5); // every 5 minutes
