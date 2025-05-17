@@ -12,11 +12,14 @@
       --primary-dark: #128C7E;
       --secondary: #075E54;
       --accent: #DCF8C6;
-      --text: #333333;
-      --light: #f5f5f5;
+      --text: #f8fafc;
+      --light: #1e293b;
       --white: #ffffff;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+      --dark-bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: rgba(255, 255, 255, 0.1);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      --gradient: linear-gradient(135deg, var(--primary), var(--primary-dark));
     }
     
     * {
@@ -27,8 +30,7 @@
     
     body {
       font-family: 'Poppins', sans-serif;
-      background: url('https://files.catbox.moe/bfkcfg.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: var(--dark-bg);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -38,37 +40,21 @@
       position: relative;
     }
     
-    body::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(18, 140, 126, 0.1), rgba(37, 211, 102, 0.1));
-      backdrop-filter: blur(8px);
-      z-index: 0;
-    }
-    
     .container {
       width: 100%;
       max-width: 400px;
-      perspective: 1000px;
       position: relative;
       z-index: 1;
     }
     
     .card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(12px);
-      border-radius: 24px;
+      background: var(--card-bg);
+      border-radius: 16px;
       padding: 30px;
       box-shadow: var(--shadow);
-      transform-style: preserve-3d;
-      transition: all 0.5s ease;
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid var(--border);
     }
     
     .card::before {
@@ -77,13 +63,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 6px;
+      height: 4px;
       background: var(--gradient);
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
     
     .logo {
@@ -100,20 +81,17 @@
       line-height: 80px;
       border-radius: 50%;
       box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
-      transition: all 0.3s ease;
-    }
-    
-    .card:hover .logo i {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
     }
     
     h2 {
       text-align: center;
-      color: var(--secondary);
+      color: var(--white);
       margin-bottom: 10px;
       font-weight: 600;
       font-size: 24px;
+      background: linear-gradient(to right, var(--primary), var(--white));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     
     .subtitle {
@@ -133,11 +111,11 @@
     .input-group input {
       width: 100%;
       padding: 15px 20px;
-      border: 2px solid rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
       font-size: 16px;
       transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(15, 23, 42, 0.5);
       color: var(--text);
       font-weight: 500;
     }
@@ -145,18 +123,18 @@
     .input-group input:focus {
       border-color: var(--primary);
       outline: none;
-      box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.15);
+      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
     }
     
     .input-group label {
       position: absolute;
       left: 20px;
       top: 15px;
-      color: #999;
+      color: #94a3b8;
       font-size: 16px;
       transition: all 0.3s ease;
       pointer-events: none;
-      background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 50%, transparent 50%);
+      background: var(--card-bg);
       padding: 0 5px;
     }
     
@@ -172,7 +150,7 @@
       width: 100%;
       padding: 16px;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       background: var(--gradient);
       color: white;
       font-size: 16px;
@@ -188,25 +166,9 @@
       overflow: hidden;
     }
     
-    .btn::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-    }
-    
-    .btn:hover::after {
-      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
     }
     
     .btn:active {
@@ -228,13 +190,12 @@
     }
     
     .code {
-      background: var(--accent);
+      background: rgba(37, 211, 102, 0.1);
       padding: 15px 25px;
-      border-radius: 12px;
-      font-size: 26px;
+      border-radius: 10px;
+      font-size: 24px;
       font-weight: 700;
-      letter-spacing: 2px;
-      color: var(--secondary);
+      color: var(--primary);
       margin-top: 15px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -246,8 +207,7 @@
     
     .code:hover {
       transform: scale(1.02);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-      background: linear-gradient(to right, #e8f5e9, var(--accent));
+      background: rgba(37, 211, 102, 0.15);
     }
     
     .code::after {
@@ -258,7 +218,7 @@
       width: 100%;
       text-align: center;
       font-size: 11px;
-      color: var(--primary-dark);
+      color: var(--primary);
       opacity: 0;
       transition: all 0.3s ease;
       font-weight: 500;
@@ -266,7 +226,7 @@
     
     .code:hover::after {
       bottom: -25px;
-      opacity: 1;
+      opacity: 0.8;
     }
     
     .status {
@@ -274,7 +234,6 @@
       color: var(--text);
       opacity: 0.8;
       margin-top: 10px;
-      font-weight: 500;
     }
     
     .loading {
@@ -297,27 +256,12 @@
       font-size: 12px;
       color: var(--text);
       opacity: 0.6;
-      line-height: 1.5;
-    }
-    
-    /* Animation for the card */
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-    
-    .floating {
-      animation: float 6s ease-in-out infinite;
     }
     
     /* Responsive adjustments */
     @media (max-width: 480px) {
       .card {
-        padding: 25px 20px;
+        padding: 20px;
       }
       
       h2 {
@@ -330,16 +274,12 @@
         height: 70px;
         line-height: 70px;
       }
-      
-      .btn {
-        padding: 14px;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="card floating">
+    <div class="card">
       <div class="logo">
         <i class="fab fa-whatsapp"></i>
       </div>
@@ -431,9 +371,9 @@
       
       function showStatus(message, type) {
         statusElement.textContent = message;
-        statusElement.style.color = type === 'error' ? '#e74c3c' : 
+        statusElement.style.color = type === 'error' ? '#f87171' : 
                                   type === 'success' ? '#25D366' : 
-                                  '#333';
+                                  '#94a3b8';
       }
       
       async function copyCode() {
@@ -441,11 +381,11 @@
           await navigator.clipboard.writeText(this.textContent);
           const originalText = this.textContent;
           this.textContent = 'Copied!';
-          this.style.backgroundColor = '#A5D6A7';
+          this.style.backgroundColor = 'rgba(37, 211, 102, 0.2)';
           
           setTimeout(() => {
             this.textContent = originalText;
-            this.style.backgroundColor = '#DCF8C6';
+            this.style.backgroundColor = 'rgba(37, 211, 102, 0.1)';
           }, 2000);
         } catch (err) {
           console.error('Failed to copy: ', err);
