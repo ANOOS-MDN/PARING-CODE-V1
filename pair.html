@@ -16,6 +16,7 @@
       --light: #f5f5f5;
       --white: #ffffff;
       --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
     }
     
     * {
@@ -44,8 +45,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(5px);
+      background: linear-gradient(135deg, rgba(18, 140, 126, 0.1), rgba(37, 211, 102, 0.1));
+      backdrop-filter: blur(8px);
       z-index: 0;
     }
     
@@ -58,15 +59,16 @@
     }
     
     .card {
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
       padding: 30px;
       box-shadow: var(--shadow);
       transform-style: preserve-3d;
       transition: all 0.5s ease;
       position: relative;
       overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
     
     .card::before {
@@ -75,13 +77,13 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 8px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      height: 6px;
+      background: var(--gradient);
     }
     
     .card:hover {
-      transform: translateY(-5px) rotateX(5deg);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
     
     .logo {
@@ -91,13 +93,19 @@
     
     .logo i {
       font-size: 50px;
-      color: var(--primary);
-      background: var(--white);
+      color: var(--white);
+      background: var(--gradient);
       width: 80px;
       height: 80px;
       line-height: 80px;
       border-radius: 50%;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover .logo i {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
     }
     
     h2 {
@@ -105,6 +113,7 @@
       color: var(--secondary);
       margin-bottom: 10px;
       font-weight: 600;
+      font-size: 24px;
     }
     
     .subtitle {
@@ -113,6 +122,7 @@
       margin-bottom: 25px;
       font-size: 14px;
       opacity: 0.8;
+      line-height: 1.5;
     }
     
     .input-group {
@@ -123,18 +133,19 @@
     .input-group input {
       width: 100%;
       padding: 15px 20px;
-      border: 2px solid #e0e0e0;
+      border: 2px solid rgba(0, 0, 0, 0.1);
       border-radius: 12px;
       font-size: 16px;
       transition: all 0.3s ease;
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.8);
       color: var(--text);
+      font-weight: 500;
     }
     
     .input-group input:focus {
       border-color: var(--primary);
       outline: none;
-      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+      box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.15);
     }
     
     .input-group label {
@@ -145,7 +156,7 @@
       font-size: 16px;
       transition: all 0.3s ease;
       pointer-events: none;
-      background: var(--white);
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 50%, transparent 50%);
       padding: 0 5px;
     }
     
@@ -154,14 +165,15 @@
       top: -10px;
       font-size: 12px;
       color: var(--primary);
+      font-weight: 500;
     }
     
     .btn {
       width: 100%;
-      padding: 15px;
+      padding: 16px;
       border: none;
       border-radius: 12px;
-      background: linear-gradient(to right, var(--primary), var(--primary-dark));
+      background: var(--gradient);
       color: white;
       font-size: 16px;
       font-weight: 600;
@@ -172,11 +184,29 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
     
     .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    }
+    
+    .btn:hover::after {
+      opacity: 1;
     }
     
     .btn:active {
@@ -201,8 +231,9 @@
       background: var(--accent);
       padding: 15px 25px;
       border-radius: 12px;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
+      letter-spacing: 2px;
       color: var(--secondary);
       margin-top: 15px;
       cursor: pointer;
@@ -210,11 +241,13 @@
       position: relative;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(37, 211, 102, 0.2);
     }
     
     .code:hover {
       transform: scale(1.02);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      background: linear-gradient(to right, #e8f5e9, var(--accent));
     }
     
     .code::after {
@@ -224,10 +257,11 @@
       left: 0;
       width: 100%;
       text-align: center;
-      font-size: 10px;
+      font-size: 11px;
       color: var(--primary-dark);
       opacity: 0;
       transition: all 0.3s ease;
+      font-weight: 500;
     }
     
     .code:hover::after {
@@ -238,8 +272,9 @@
     .status {
       font-size: 14px;
       color: var(--text);
-      opacity: 0.7;
+      opacity: 0.8;
       margin-top: 10px;
+      font-weight: 500;
     }
     
     .loading {
@@ -262,6 +297,7 @@
       font-size: 12px;
       color: var(--text);
       opacity: 0.6;
+      line-height: 1.5;
     }
     
     /* Animation for the card */
@@ -281,11 +317,11 @@
     /* Responsive adjustments */
     @media (max-width: 480px) {
       .card {
-        padding: 20px;
+        padding: 25px 20px;
       }
       
       h2 {
-        font-size: 20px;
+        font-size: 22px;
       }
       
       .logo i {
@@ -293,6 +329,10 @@
         width: 70px;
         height: 70px;
         line-height: 70px;
+      }
+      
+      .btn {
+        padding: 14px;
       }
     }
   </style>
