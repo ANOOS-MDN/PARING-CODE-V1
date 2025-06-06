@@ -57,19 +57,24 @@ router.get('/', async (req, res) => {
                 }, {
                     quoted: Eliteses
                 });
-await EliteProEmpire.sendMessage(EliteProEmpire.user.id, { text: `*╭❍* *SUCCESSFULLY CONNECTED* *❍*
-*┊* Please support our channels
-*┊*❶  || *ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ* =
+await EliteProEmpire.sendMessage(EliteProEmpire.user.id, { text: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
+📁 Upload the creds.json file to your session folder.
+
+📢 *Stay Updated — Follow Our Channels:*
+
+➊ *WhatsApp Channel*  
 https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g
-*┊*❷ || *ᴛᴇʟᴇɢʀᴀᴍ* =
+
+➋ *Telegram*  
 https://t.me/elitepro_md
-*┊*➌ || *ʏᴏᴜᴛᴜʙᴇ* =
+
+➌ *YouTube*  
 https://youtube.com/@eliteprotechs
-*┊* 📛Don't share code with anyone.
-*┊* *ᴠɪꜱɪᴛ ᴏᴜʀ ᴡᴇʙꜱɪᴛᴇ ғᴏʀ ᴍᴏʀᴇ*
-https://eliteprotech.vercel.app
-*┊* Upload the file on session folder.
-*╰═❍* *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴇʟɪᴛᴇ-ᴘʀᴏ*` }, {quoted: Eliteses});
+
+🚫 *Do NOT share your session ID or creds.json with anyone.*
+
+🌐 *Explore more tools on our website:*  
+https://eliteprotech.vercel.app` }, {quoted: Eliteses});
         await delay(100);
         return await removeFile('./session');
         process.exit(0)
