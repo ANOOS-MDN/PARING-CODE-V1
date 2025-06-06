@@ -64,7 +64,7 @@ https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g
 *┊*❷ || *ᴛᴇʟᴇɢʀᴀᴍ* =
 https://t.me/elitepro_md
 *┊*➌ || *ʏᴏᴜᴛᴜʙᴇ* =
-https://youtube.com/@eliteprotech
+https://youtube.com/@eliteprotechs
 *┊* 📛Don't share code with anyone.
 *┊* *ᴠɪꜱɪᴛ ᴏᴜʀ ᴡᴇʙꜱɪᴛᴇ ғᴏʀ ᴍᴏʀᴇ*
 https://eliteprotech.vercel.app
