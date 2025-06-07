@@ -47,17 +47,11 @@ router.get('/', async (req, res) => {
                 if (connection == "open") {
                 await delay(10000);
                     const sessionElite = fs.readFileSync('./session/creds.json');
-                    const audioElite = fs.readFileSync('./kongga.mp3');
                     EliteProEmpire.groupAcceptInvite("DM8Lur7slpcFJyd0Kl9osq");
 				const Eliteses = await EliteProEmpire.sendMessage(EliteProEmpire.user.id, { document: sessionElite, mimetype: `application/json`, fileName: `creds.json` });
-				EliteProEmpire.sendMessage(EliteProEmpire.user.id, {
-                    audio: audioElite,
-                    mimetype: 'audio/mp4',
-                    ptt: true
-                }, {
-                    quoted: Eliteses
-                });
-await EliteProEmpire.sendMessage(EliteProEmpire.user.id, { text: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
+				
+await EliteProEmpire.sendMessage(EliteProEmpire.user.id, {
+  text: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
 📁 Upload the creds.json file to your session folder.
 
 📢 *Stay Updated — Follow Our Channels:*
@@ -74,7 +68,21 @@ https://youtube.com/@eliteprotechs
 🚫 *Do NOT share your session ID or creds.json with anyone.*
 
 🌐 *Explore more tools on our website:*  
-https://eliteprotech.vercel.app` }, {quoted: Eliteses});
+https://eliteprotech.vercel.app`,
+
+  contextInfo: {
+    externalAdReply: {
+      title: "Session Generator",
+      body: "ElitePro Tools",
+      thumbnailUrl: "https://files.catbox.moe/1jquts.jpg",
+      sourceUrl: "https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g",
+      mediaType: 1,
+      renderLargerThumbnail: true,
+      showAdAttribution: true
+    }
+  }
+}, { quoted: Eliteses });
+
         await delay(100);
         return await removeFile('./session');
         process.exit(0)
