@@ -72,8 +72,8 @@ https://eliteprotech.vercel.app`,
 
   contextInfo: {
     externalAdReply: {
-      title: "Session Generator",
-      body: "ElitePro Tools",
+      title: "Successfully Generated Session",
+      body: "EliteProTech Session Generator 1",
       thumbnailUrl: "https://files.catbox.moe/1jquts.jpg",
       sourceUrl: "https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g",
       mediaType: 1,
