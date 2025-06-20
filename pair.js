@@ -84,8 +84,8 @@ https://eliteprotech.vercel.app`,
 }, { quoted: Eliteses });
 
         await delay(100);
-        return await removeFile('./session');
-        process.exit(0)
+        removeFile('./session');
+        return;
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
                     ElitePair();
