@@ -1,4 +1,6 @@
 {
+  "name": "whatsapp-pairing-code-generator",
+  "version": "1.0.0",
   "description": "A WhatsApp bot with rich and multiple functions",
   "main": "./index.js",
   "engines": {
@@ -6,9 +8,12 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "start": "node pair.js"
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@vercel/node": "^2.15.3",
     "baileys": "^6.7.18",
     "qrcode": "^1.5.3",
     "awesome-phonenumber": "^2.64.0",
