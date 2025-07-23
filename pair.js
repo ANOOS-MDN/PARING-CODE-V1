@@ -51,31 +51,31 @@ router.get('/', async (req, res) => {
 				const Eliteses = await EliteProEmpire.sendMessage(EliteProEmpire.user.id, { document: sessionElite, mimetype: `application/json`, fileName: `creds.json` });
 				
 await EliteProEmpire.sendMessage(EliteProEmpire.user.id, {
-  text: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
-📁 Upload the creds.json file to your session folder.
+  text: `✅ *جلسه بوتات انوس!*  
+📁 ضيف ملف الجلسه هذا الي بوتك creds.json.
 
-📢 *Stay Updated — Follow Our Channels:*
+📢 *الدعم:*
 
-➊ *WhatsApp Channel*  
-https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g
+➊ *واتساب l*  
+https://chat.whatsapp.com/BlUx7LC9KLD24RocTSb6cD
 
-➋ *Telegram*  
-https://t.me/elitepro_md
+➋ *مطور*  
++967771160204
 
-➌ *YouTube*  
-https://youtube.com/@eliteprotechs
+➌ *يوتيوب*  
+https://youtube.com/@vhhgvgghhvh?si=94OUCewCXiJLZF_s
 
-🚫 *Do NOT share your session ID or creds.json with anyone.*
+🚫 *الملف بدل الجلسه او الايدي ID or creds.json .*
 
-🌐 *Explore more tools on our website:*  
-https://eliteprotech.vercel.app`,
+🌐 *رابط موقع الجلسه انشره:*  
+`,
 
   contextInfo: {
     externalAdReply: {
       title: "Successfully Generated Session",
       body: "EliteProTech Session Generator 1",
       thumbnailUrl: "https://files.catbox.moe/1jquts.jpg",
-      sourceUrl: "https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g",
+      sourceUrl: "https://chat.whatsapp.com/BlUx7LC9KLD24RocTSb6cD",
       mediaType: 1,
       renderLargerThumbnail: true,
       showAdAttribution: true
